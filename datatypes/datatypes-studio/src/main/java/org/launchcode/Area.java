@@ -13,9 +13,9 @@ public class Area {
 
         scan.close();
 
-        double product = 3.14 * num1 * num1;
+//        double product = 3.14 * num1 * num1;
         /*Use concatenation to print the greeting*/
-        System.out.println("The area of a circle of radius " + num1 + " is: " + product);
+        System.out.println("The area of a circle of radius " + num1 + " is: " + Circle.getArea(num1));
     }
 
 }
