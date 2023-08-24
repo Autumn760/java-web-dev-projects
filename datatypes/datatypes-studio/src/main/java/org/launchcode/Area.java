@@ -11,6 +11,7 @@ public class Area {
         /*Create a variable to store the user’s response*/
         double num1 = scan.nextDouble();
 
+
         scan.close();
 
 //        double product = 3.14 * num1 * num1;
