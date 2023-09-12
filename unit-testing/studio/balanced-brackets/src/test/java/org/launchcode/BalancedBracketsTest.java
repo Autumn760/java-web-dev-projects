@@ -13,51 +13,67 @@ class BalancedBracketsTest {
 
     @Test
     public void onlyBracketsReturnsTrue() {
+
         assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
     }
 
     @Test
     public void twoPairsOfBracketsReturnsTrue() {
+
         assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch][Code]"));
     }
 
     @Test
     public void nestedBracketsReturnsTrue() {
+
         assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch[Code]]"));
     }
+
     @Test
     public void emptyStringReturnsFalse() {
+
         assertFalse(BalancedBrackets.hasBalancedBrackets(""));
     }
+
     @Test
     public void unfinishedBracketsReturnsFalse() {
+
         assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
     }
+
     @Test
     public void misorderedBracketsreturnsFalse() {
+
         assertFalse(BalancedBrackets.hasBalancedBrackets("]LaunchCode["));
     }
 
     @Test
     public void specialCharactersDoNotAlter() {
+
         assertTrue(BalancedBrackets.hasBalancedBrackets("[#@$  %&*&*(#%]"));
     }
+
     @Test
     public void closingBracketLeadingStringsFail() {
+
         assertFalse(BalancedBrackets.hasBalancedBrackets("]][]"));
     }
+
     @Test
     public void closingBracketsAtEndFail() {
+
         assertFalse(BalancedBrackets.hasBalancedBrackets("[]]]"));
     }
 
     @Test
     public void laterMisorderedBracketsFail() {
+
         assertFalse(BalancedBrackets.hasBalancedBrackets("[][]]["));
     }
 
     @Test
-    public void superNestPasses () {
+    public void superNestPasses() {
+
         assertTrue(BalancedBrackets.hasBalancedBrackets("[[[[[[[[[[]]]]]]]]]]"));
     }
 }
